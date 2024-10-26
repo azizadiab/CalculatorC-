@@ -1,0 +1,59 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Main
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            char op;
+            double first, scount, result;
+            Console.Write("Enter First: ");
+            first = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter Scount: ");
+            scount = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter Opeerator: ");
+            op = (char) Console.Read();
+
+           
+
+            switch(op)
+            {
+                case '+':
+                    result = first + scount;
+                    Console.WriteLine("{0} + {1} = {2}", first, scount, result);
+                    break;
+
+                case '-':
+                    result = first - scount;
+                    Console.WriteLine("{0} - {1} = {2}", first, scount, result);
+                    break;
+
+                case '*':
+                    result = first * scount;
+                    Console.WriteLine("{0} * {1} = {2}", first, scount, result);
+                    break;
+
+                case '/':
+                    result = first / scount;
+                    Console.WriteLine("{0} / {1} = {2}", first, scount, result);
+                    break;
+
+                default:
+
+                    Console.WriteLine("Invalid Operator");
+                    break;
+
+            }
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
+
